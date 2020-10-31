@@ -1,0 +1,11 @@
+body {
+    background-color: #DBC7BE;
+}
+/* nav {
+    color: #95ADB6;
+} */
+.content {
+    padding-top: 5%;
+    max-width: 500px;
+    margin: auto;
+  }
