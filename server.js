@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const routes = require('./routes');
-const session = require('cookie-session');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 
@@ -11,14 +10,6 @@ const randomTriviaQuestions = require('./public/scripts/trivia');
 const { update, reset }= require('./public/scripts/iter');
 const { incrementScore, zeroScore }= require('./public/scripts/score');
 
-// Set for deployment
-app.set('trust proxy', 1);
-
-// Create Session
-app.use(session({
-    name:'session',
-    keys: ['shhh', '123']
-}));
 
 app.use(bodyParser.urlencoded({extended: false}));
 
