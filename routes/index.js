@@ -11,7 +11,7 @@ module.exports = ({ data, update, reset,  zero, increment}) => {
             if (data['correct'] === req.body.answer){
                 score = increment(score);
                 res.status(200).render('message',{
-                    message: `<h1>CORRECT</h1><p><bold>${data['correct']}</bold>is the right answer! \n Your Score is now ${score}</p>`,
+                    message: `<h1>CORRECT</h1><p><bold>${data['correct']}</bold> is the right answer! \n Your Score is now ${score}</p>`,
                     button: `<a href="/questions/${parseInt(req.params.id) + 1}" role="button" class="btn btn-primary">Next Question</a>`,
                     pageTitle: 'Correct'
                 });
