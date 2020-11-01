@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 // Modules
 const randomTriviaQuestions = require('./public/scripts/trivia');
-const { incrementNum, resetZero }= require('./public/scripts/score');
+const { incrementNum, resetZero }= require('./public/scripts/num');
 
 
 app.use(bodyParser.urlencoded({extended: false}));
