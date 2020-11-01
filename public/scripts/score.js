@@ -1,11 +1,11 @@
 
-const zeroScore = () => {
-	return score = 0;
+const resetZero = () => {
+	return num = 0;
 }
 
 
-const incrementScore = (score) => {
-  return score += 1;
+const incrementNum = (num) => {
+  return num += 1;
 }
 
-module.exports = { incrementScore: incrementScore, zeroScore: zeroScore};
+module.exports = { incrementNum: incrementNum, resetZero: resetZero};

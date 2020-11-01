@@ -7,8 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 // Modules
 const randomTriviaQuestions = require('./public/scripts/trivia');
-const { update, reset }= require('./public/scripts/iter');
-const { incrementScore, zeroScore }= require('./public/scripts/score');
+const { incrementNum, resetZero }= require('./public/scripts/score');
 
 
 app.use(bodyParser.urlencoded({extended: false}));
@@ -18,16 +17,14 @@ app.set('view engine', 'ejs');
 // Create Template variable
 app.locals.siteName = 'Tandem Trivia';
 
-// Mount Route Middleware 
+// Mount Route Middleware
 app.use(express.static(path.join(__dirname, '/')));
 
 
 app.use('/', routes({
     data: randomTriviaQuestions,
-    update: update,
-    reset: reset,
-    zero: zeroScore,
-    increment: incrementScore
+    incrementNum: incrementNum,
+    resetZero: resetZero
 }));
 
 
