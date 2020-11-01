@@ -5,7 +5,7 @@ Tandem Trivia is a Node.js and Express trivia app. Users will be presented with 
 
 ## Installation
 Use the package manager [npm](https://docs.npmjs.com/cli/v6/commands/npm-install) to install dependencies
-`npm install` then run `node server.js` or `nodemon` if applicable
+`npm install` then run `npm start`
 
 The server runs on Port 3000.
 
